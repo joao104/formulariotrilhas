@@ -1,0 +1,159 @@
+/* Resetando estilos para melhor consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Para garantir que as imagens fiquem empilhadas */
+.image-container, .logo-container {
+    text-align: center; /* Centraliza as imagens */
+    margin-bottom: 20px; /* Espaço entre as imagens */
+}
+
+/* Estilos para a imagem superior */
+.image-superior {
+    width: 100%; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilos para a logo */
+.logo-imagem {
+    width: 90%; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+body {
+    background-color: red; /* Cor de fundo em vermelho */
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Cores da imagem */
+:root {
+    --brand-primary: #F67841;
+    --brand-secondary: #F3541C;
+    --brand-tertiary: #E43A12;
+    --brand-highlight: #2135A6;
+
+    --text-primary: #292524;
+    --text-secondary: #57534E;
+    --text-tertiary: #8F8881;
+    --text-highlight: #E43A12;
+
+    --surface-primary: #FFFFFF;
+    --surface-secondary: #FEE7D6;
+    --surface-disabled: #E7E5E4;
+
+    --stroke-default: #D6D3D1;
+    --stroke-highlight: #F3541C;
+
+    --semantic-error: #DC2626;
+}
+
+.container {
+    background: var(--surface-primary);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--brand-tertiary);
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 1px solid var(--stroke-default);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--brand-secondary);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--stroke-default);
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: var(--surface-secondary);
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--brand-primary);
+    outline: none;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button[type="submit"] {
+    background-color: var(--brand-secondary);
+    color: white;
+}
+
+button[type="reset"] {
+    background-color: var(--text-tertiary);
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Estilizando mensagens de confirmação */
+.confirmation-message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--semantic-error);
+    color: white;
+    border-radius: 5px;
+}
